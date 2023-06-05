@@ -2,7 +2,7 @@
 {% if page.ref %}
 	{% if page.path contains '_posts' %}
 	<div class="language-switcher-container py-3 py-md-4">
-		<p class="lead d-block d-md-inline-block">Read this in:&nbsp;</p>
+		<!-- <p class="lead d-block d-md-inline-block">Read this in:&nbsp;</p> -->
 		<ul class="lang-switcher list-style-none pl-0">
 		{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
 		{% for post in posts %}
@@ -17,12 +17,12 @@
 		 {% endif %}
 		{% endfor %}
 		</ul>
-		</div>
+	</div>
 
 	{% else %}
 
 	<div class="language-switcher-container py-3 py-md-4">
-		<p class="lead d-block d-md-inline-block">Read this in:&nbsp;</p>
+		<!-- <p class="lead d-block d-md-inline-block">Read this in:&nbsp;</p> -->
 		<ul class="lang-switcher list-style-none pl-0">
 		{% assign pagesall=site.pages | where:"ref", page.ref | sort: 'lang' %}
 		{% for post in pagesall %}
@@ -37,6 +37,6 @@
 		 {% endif %}
 		{% endfor %}
 		</ul>
-		</div>
+	</div>
 	{% endif %}
 {% endif %}
